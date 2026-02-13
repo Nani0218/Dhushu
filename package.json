@@ -1,0 +1,11 @@
+{
+  "name": "romantic-webpage",
+  "version": "1.0.0",
+  "description": "Valentine's Day Surprise Webpage",
+  "scripts": {
+    "start": "npx -y serve romantic-webpage",
+    "dev": "npx -y serve romantic-webpage"
+  },
+  "author": "",
+  "license": "ISC"
+}
