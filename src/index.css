@@ -1,0 +1,485 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+
+/* Britannic Bold Local Font */
+@font-face {
+  font-family: "Britannic Bold";
+  src: url("../romantic-webpage/fonts/BritannicBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.6s ease-in-out;
+}
+
+/* ================= LANDING PAGE STYLES ================= */
+
+.landing-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  height: 80vh;
+  background: rgb(193, 167, 167);
+  overflow: hidden;
+}
+
+.landing-page .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sweetestheart-container {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ANIMATION */
+@keyframes color-change {
+  0% {
+    background: #DC143C;
+  }
+  25% {
+    background: purple;
+  }
+  50% {
+    background: white;
+  }
+  75% {
+    background: #E0115F;
+  }
+  100% {
+    background: #DC143C;
+  }
+}
+
+/* HEART */
+.sweetestheart {
+  background-color: #DC143C;
+  position: relative;
+  transform: rotate(-45deg);
+  width: 55px;
+  height: 50px;
+}
+
+.sweetestheart:before,
+.sweetestheart:after {
+  content: "";
+  background-color: #DC143C;
+  border-radius: 50%;
+  height: 50px;
+  position: absolute;
+  width: 50px;
+}
+
+.sweetestheart:before {
+  top: -25px;
+  left: 0;
+}
+
+.sweetestheart:after {
+  left: 25px;
+  top: 0;
+}
+
+.sweetestheart, .sweetestheart:before, .sweetestheart:after {
+  animation-name: color-change;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+/* HEART 2 */
+.sweetestheart-2, .sweetestheart-2:before, .sweetestheart-2:after {
+  animation-delay: 1s;
+}
+
+/* HEART 3 */
+.sweetestheart-3, .sweetestheart-3:before, .sweetestheart-3:after {
+  animation-delay: 2s;
+}
+
+/* click me button start */
+.button {
+  width: 50px;
+  height: 50px;
+  top: 69%;
+  position: fixed;
+  left: 80%;
+  margin-top: -45px;
+  margin-left: -50px;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  transition: background 0.5s ease;
+}
+
+.active#heart:before, .active#heart:after {
+  background: rgb(241, 7, 7) !important;
+}
+
+#heart {
+  width: 100px;
+  height: 90px;
+  transition: background 0.5s ease;
+}
+
+#heart:before,
+#heart:after {
+  transition: background 0.5s ease;
+  position: absolute;
+  content: "";
+  left: 50px;
+  top: 0;
+  width: 50px;
+  height: 80px;
+  background: rgb(178, 152, 145);
+  border-radius: 50px 50px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+#heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+/* Heart Container */
+.heart-container {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.heart-container .heart,
+.heart-container .heart svg {
+  width: 100%;
+  height: 100%;
+}
+
+.heart-container .heart {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+}
+
+.heart-container .heart svg {
+  fill: #f44336;
+  fill: url("#MyGradient");
+}
+
+.bottom-text {
+  position: absolute;
+  top: 97%;
+  right: 39%;
+  margin-top: -110px;
+  margin-right: 70px;
+  font-family: 'Baguet Script', cursive;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(94, 8, 30);
+  background: #E48397;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 3px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: #f4877b 0px 0px 10px;
+}
+
+/* ================= PROPOSAL PAGE STYLES ================= */
+
+.proposal-page {
+  font-family: "Britannic Bold", serif;
+  background-image: url("/romantic-webpage/teddy.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 390px;
+  width: 100%;
+  height: 100vh;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.proposal-page .containar {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.proposal-page button {
+  margin: 10px;
+  height: 50px;
+  width: 70px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.proposal-page #yes {
+  font-family: "Satisfy", cursive;
+  font-size: 20px;
+  background-color: #35e20f;
+}
+
+.proposal-page #no {
+  font-family: "Satisfy", cursive;
+  font-size: 20px;
+  background-color: #d91414;
+}
+
+.proposal-page #yes:active {
+  background: #632d5d;
+}
+
+.proposal-page #no:active {
+  background: #310e25;
+}
+
+.proposal-page #can {
+  font-family: "Satisfy", cursive;
+  font-size: 20px;
+  color: #BF3131;
+  background: #dfe228;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 3px;
+  padding: 10px;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+  margin: 20px;
+}
+
+/* ================= ENVELOPE PAGE STYLES ================= */
+
+.envelope-page {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: rgb(5, 53, 61);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.envelope-page .container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.envelope-page .container > .envelope-wrapper {
+  background: #f5edd1;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.envelope-page .envelope-wrapper {
+  background: #f5edd1;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+}
+
+.envelope-page .envelope-wrapper > .envelope {
+  position: relative;
+  width: 300px;
+  height: 230px;
+}
+
+.envelope-page .envelope-wrapper > .envelope::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  border-top: 130px solid #ecdeb8;
+  border-right: 150px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: all 0.5s ease-in-out 0.7s;
+}
+
+.envelope-page .envelope-wrapper > .envelope::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 0px;
+  height: 0px;
+  border-top: 130px solid transparent;
+  border-right: 150px solid #e6cfa7;
+  border-bottom: 100px solid #e6cfa7;
+  border-left: 150px solid #e6cfa7;
+}
+
+.envelope-page .envelope > .letter {
+  position: absolute;
+  right: 20%;
+  bottom: 0;
+  width: 54%;
+  height: 80%;
+  background: #fff;
+  text-align: center;
+  transition: all 1s ease-in-out;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px 10px;
+}
+
+.envelope-page .sweetheart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background: rgb(252, 8, 231);
+  z-index: 4;
+  transform: translate(-50%, -20%) rotate(45deg);
+  transition: transform 0.5s ease-in-out 1s;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.envelope-page .sweetheart:before, 
+.envelope-page .sweetheart:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(252, 8, 231);
+  border-radius: 50%;
+}
+
+.envelope-page .sweetheart:before {
+  top: -7.5px;
+}
+
+.envelope-page .sweetheart:after {
+  right: 7.5px;
+}
+
+/* ================= LOVE LETTER PAGE STYLES ================= */
+
+.love-letter-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #772B39, #a63d50);
+  font-family: 'Dancing Script', cursive;
+}
+
+.love-letter-page .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.love-letter-page .box {
+  display: flex;
+  align-items: left;
+  gap: 80px;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.love-letter-page .heart-image {
+  width: 330px;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 15px;
+  border: 6px solid white;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+.love-letter-page .letter {
+  font-family: Modern Love Caps (italic);
+  width: 450px;
+  color: white;
+  text-align: center;
+  font-size: 23px;
+  line-height: 1.5;
+}
+
+.love-letter-page .letter strong {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.love-letter-page .valentine-text {
+  font-family: "Lucida Calligraphy", "Brush Script MT", cursive;
+  font-style: italic;
+  font-size: 62px;
+  color: #ffd6e8;
+  text-align: center;
+  letter-spacing: 2px;
+  animation: floatText 4s ease-in-out infinite;
+  animation: heartbeat 4s infinite;
+}
+
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 10px #fff,
+                 0 0 20px #ff4da6;
+  }
+  to {
+    text-shadow: 0 0 20px #fff,
+                 0 0 40px #ff1a75;
+  }
+}
+
+@keyframes floatText {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .love-letter-page .box {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .love-letter-page .heart-image {
+    width: 260px;
+    height: 320px;
+  }
+
+  .love-letter-page .letter {
+    width: 90%;
+    font-size: 20px;
+  }
+
+  .love-letter-page .valentine-text {
+    font-size: 26px;
+  }
+}
