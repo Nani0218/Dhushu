@@ -37,7 +37,7 @@ function LoveLetterPage() {
       <div className="container">
         <div className="box">
           <img 
-            src="/romantic-webpage/left.jpeg" 
+            src="/romantic-webpage/left.jpeg"   
             className="heart-image" 
             alt="My Love" 
           />
